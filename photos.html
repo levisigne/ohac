@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photos - Oriental Healing Arts Center</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;600&family=Young+Serif&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body id="photos">
+    
+    <div class="content">
+        <div class="banner">
+            <h1>Photos</h1>
+        </div>
+
+        <div class="photo-grid">    
+    
+        </div>
+
+        <div class="lightbox">
+            <div class="lightbox-content">
+                <img src="" alt="Lightbox Image">
+                <div class="lightbox-nav">
+                    <button class="prev">&#10094;</button>
+                    <button class="next">&#10095;</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="back">
+            <a class="back-button" href="/.">⬅ Go back</a>
+        </div>
+
+    </div>
+    <script>
+        // Array of image URLs
+        const imageUrls = [
+            "images/placeholder_horizontal.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_horizontal.jpg",
+            "images/placeholder_horizontal.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_horizontal.jpg",
+            "images/placeholder_horizontal.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_vertical.jpg",
+            "images/placeholder_horizontal.jpg"
+        ];
+
+        // Select the photo grid container
+        const photoGrid = document.querySelector('.photo-grid');
+
+        // Populate the grid with images
+        imageUrls.forEach(src => {
+            const photoDiv = document.createElement('div');
+            photoDiv.classList.add('photo');
+            const img = document.createElement('img');
+            img.src = src;
+            photoDiv.appendChild(img);
+            photoGrid.appendChild(photoDiv);
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

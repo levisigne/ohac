@@ -1,0 +1,480 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+
+/* Body styles - using flexbox for centering */
+body {
+    font-family: 'Lexend', sans-serif;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    color: white;
+    background-color: #ffffff;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    padding: 10px 10px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+.content {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 20px;
+    background: black;
+    color: white;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    align-items: center;
+    /* gap: 20px; */
+    max-width: 100vw;
+}
+
+.banner img {
+    object-fit: cover;
+    display: block;
+    width: 100vw;
+    max-width: 100%;
+}
+
+.banner h1 {
+    font-weight: 500;
+    font-size: 28px;
+    /* padding: 60px 40px; */
+    text-align: center;
+}
+
+/* HOME ======================================================================== */
+/* Main container that will hold all content */
+
+/* Center content wrapper - using flexbox for vertical layout */
+#home .content {
+    justify-content: center;
+}
+
+/* Logo styling */
+.logo {
+    width: 74px;
+    height: 74px;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+}
+
+/* Center name styling */
+.name {
+    font-family: 'Young Serif', serif;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 20px;
+    font-weight: 400;
+    max-width: 240px;
+}
+
+/* Divider styling */
+#home .divider {
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    margin: 25px 0px 20px;
+}
+
+/* Menu styling - using flexbox */
+.menu {
+    width: 100%;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+}
+
+.menu a {
+    font-family: 'Lexend', sans-serif;
+    font-size: 14px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140px;
+    height: 40px;
+}
+
+.menu a:hover {
+    background-color: #fff;
+    color: #000;
+    border-radius: 2px;
+}
+
+/* ABOUT ======================================================================== */
+
+#about .logo {
+    margin: 70px 0px 10px;
+}
+#about h1 {
+    margin: 0px 30px 40px;
+    max-width: 300px;
+}
+
+#about .text {
+    max-width: 600px;
+    padding: 40px 40px;
+}
+#about p {
+    line-height: 2;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: justify;
+}
+
+@media screen and (min-width: 601px) {
+    #about .banner img {
+        max-width: 600px;
+        border-radius: 4px;
+    }
+}
+
+/* BOOK ======================================================================== */
+
+#book .banner {
+    margin-bottom: 40px;
+}
+
+@media screen and (min-width: 640px) {
+    #book .banner img {
+        height: 300px;
+        
+    }
+}
+
+#book .text {
+    padding: 0px 30px;
+    max-width: 400px;
+}
+
+@media screen and (min-width: 601px) {
+    #book .text {
+        border-radius: 16px;
+        padding: 0px 30px;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+#book .text h1,h2,h3,h4,h5,h6 {
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+@media screen and (min-width: 640px) {
+    #book h1 {
+        font-size: 42px;
+    }
+}
+
+#book .text p {
+    font-weight: 300;
+    margin-bottom: 10px;
+    line-height: 1.75;
+}
+
+blockquote {
+    background-color: #111;
+    border-radius: 4px;
+    padding: 20px;
+    margin: 20px 0px 40px;
+}
+
+#book .iframe {
+    background-color: white;
+    margin: 0px auto;
+    border-radius: 16px;
+    padding: 15px 0px;
+    width: 100%;
+    max-width: 340px;
+}
+
+@media screen and (min-width: 601px) {
+    #book .iframe {
+        padding: 20px 0px;
+        width: 100%;
+        max-width: 600px;
+    }
+}
+
+/* CALENDAR ======================================================================== */
+
+#calendar {
+    background-color: #ffffff;
+    /* overflow: hidden; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    padding: 10px 10px;
+}
+
+#calendar .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20px; */
+    min-height: 160px;
+    color: white;
+}
+
+#calendar .banner h1 {
+    font-weight: 500;
+    font-size: 28px;
+    /* text-transform: uppercase; */
+}
+
+.events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
+}
+
+@media screen and (min-width: 640px) {
+    .events {
+        flex-direction: row;
+        
+    }
+}
+
+@media screen and (min-width: 640px) {
+    #calendar .content {
+        justify-content: center;
+        align-items: stretch;
+    }
+}
+
+
+.events .iframe {
+    padding: 5px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0px;
+}
+
+.events .iframe iframe {
+    border-radius: 5px;
+}
+
+/* PICTURES ======================================================================== */
+
+/* Pictures page styles */
+#photos {
+    background-color: #ffffff;
+    /* overflow: hidden; */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    height: 100vh;
+    padding: 10px 10px;
+}
+
+#photos .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 20px 20px; */
+    /* min-height: 200px; */
+    color: white;
+    font-weight: 500;
+    font-size: 28px;
+    padding: 75px;
+}
+
+#photos .banner h1 {
+    font-weight: 400;
+    font-size: 28px;
+    /* text-transform: uppercase; */
+}
+
+
+
+/* Photo grid styling - two column square layout */
+.photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    width: 100%;
+    margin: 0px auto;
+    max-width: 600px;
+    padding: 0px 20px;
+    height: 100%;
+    overflow: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.photo {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* Creates a square aspect ratio */
+    overflow: hidden;
+}
+
+.photo img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This ensures the image covers the square area properly */
+    border-radius: 2px; 
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.photo:hover img {
+    transform: scale(1.05);
+}
+
+/* Media query for larger screens (>600px) - three column layout */
+@media screen and (min-width: 601px) {
+    .photo-grid {
+        grid-template-columns: repeat(3, 1fr);
+        max-width: 900px; /* Increased max-width to accommodate the wider layout */
+    }
+}
+
+.lightbox {
+    background-color: rgba(0, 0, 0, 0.97);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.lightbox.active {
+    display: flex;
+}
+
+.lightbox-content {
+    position: relative;
+    max-width: 100%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lightbox img {
+    max-width: 100%;
+    max-height: 90vh;
+    object-fit: contain;
+    cursor: default;
+}
+
+.lightbox-nav {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1001;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.lightbox-nav button {
+    background-color: rgba(0, 0, 0, 0.0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    /* width: 40px; */
+    /* height: 40px; */
+    font-size: 20px;
+    cursor: pointer;
+    margin: 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* IFRAME ======================================================================== */
+    
+
+.iframe {
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+}
+
+
+/* MOBILE DESKTOP ======================================================================== */
+.desktop {
+    display: none;
+}
+
+@media screen and (min-width: 601px) {
+    .mobile {
+        display: none;
+    }
+    .desktop {
+        display: block;
+    }
+}
+
+
+/* BACK ======================================================================== */
+
+.back {
+    background-color: black;
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.back-button {
+    color: white;
+    text-decoration: none;
+    max-width: 100%;
+    font-weight: 450;
+}
+
