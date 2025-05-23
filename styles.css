@@ -105,6 +105,7 @@ body::-webkit-scrollbar {
 /* Menu styling - using flexbox */
 .menu {
     width: 100%;
+    text-align: center;
 }
 
 .menu ul {
