@@ -6,6 +6,11 @@
     
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
 /* Body styles - using flexbox for centering */
 body {
     font-family: 'Lexend', sans-serif;
@@ -33,7 +38,9 @@ body::-webkit-scrollbar {
     flex-direction: column;
     align-items: center;
     border-radius: 20px;
-    background: black;
+    background: #000000;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
     color: white;
     overflow: auto;
     -ms-overflow-style: none;  /* IE and Edge */
@@ -70,17 +77,38 @@ body::-webkit-scrollbar {
 /* Center content wrapper - using flexbox for vertical layout */
 #home .content {
     justify-content: center;
+    background: radial-gradient(circle at 0% 50%, #000000, #000000, #04001f, #03012f, #0a184d, #1a2658, #152257, #190f50, #030925, #000000, #000000);
+      background-size: 400% 400%;
+      animation: moveGradient 120s linear infinite;
 }
+
+@keyframes moveGradient {
+      0% {
+        background-position: 0% 50%;
+      }
+      25% {
+        background-position: 100% 50%;
+      }
+      50% {
+        background-position: 100% 100%;
+      }
+      75% {
+        background-position: 0% 100%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
 
 /* Logo styling */
 .logo {
-    width: 74px;
-    height: 74px;
+    width: 120px;
+    /* height: 74px; */
 }
 
 .logo img {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */
 }
 
 /* Center name styling */
@@ -189,7 +217,7 @@ body::-webkit-scrollbar {
         border-radius: 16px;
         padding: 0px 30px;
         width: 100%;
-        max-width: 600px;
+        max-width: 500px;
     }
 }
 
@@ -208,6 +236,10 @@ body::-webkit-scrollbar {
     font-weight: 300;
     margin-bottom: 10px;
     line-height: 1.75;
+}
+
+#book .text h1,h2,p {
+    padding: 0px 10px;
 }
 
 blockquote {
@@ -463,7 +495,7 @@ blockquote {
 /* BACK ======================================================================== */
 
 .back {
-    background-color: black;
+    /* background-color: black; */
     width: 100%;
     padding: 50px;
     display: flex;
