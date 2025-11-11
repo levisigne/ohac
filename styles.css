@@ -37,7 +37,7 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 10px;
     background: #000000;
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -77,7 +77,7 @@ body::-webkit-scrollbar {
 /* Center content wrapper - using flexbox for vertical layout */
 #home .content {
     justify-content: center;
-    background: radial-gradient(circle at 0% 50%, #000000, #000000, #04001f, #03012f, #0a184d, #1a2658, #152257, #190f50, #030925, #000000, #000000);
+    background: radial-gradient(circle at 0% 50%, #000000, #000000, #04001f, #03012f, #030925, #000000, #000000);
       background-size: 400% 400%;
       animation: moveGradient 120s linear infinite;
 }
@@ -316,6 +316,13 @@ blockquote {
     }
 }
 
+.events img {
+    display: block;
+    margin: 0px auto;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 8px;
+}
 
 .events .iframe {
     padding: 5px;
