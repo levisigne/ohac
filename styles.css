@@ -313,7 +313,7 @@ blockquote {
 
 @media screen and (min-width: 640px) {
     #calendar .content {
-        justify-content: center;
+        justify-content: flex-start;
         align-items: stretch;
     }
 }
